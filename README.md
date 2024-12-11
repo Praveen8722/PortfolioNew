@@ -6,24 +6,6 @@ The personal portfolio website showcases my skills, projects, and experiences as
 click on the link to see :- ([Open in Youtube](https://youtu.be/BtyURSWKxgM))
 
 
-# portfolio preview
 
-# Home Page
-![screenshot](Home.png)
-
-# About Page
-![screenshot](About.png)
-
-# Education Page
-![screenshot](Education.png)
-
-# Services Page
-![screenshot](Services.png)
-
-# Contact Me  Page
-![screenshot](ContactMe.png)
-
-# Footer
-![screenshot](Footer.png)
 
 
