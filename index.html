@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Website | SortedCoding</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+
+    <head>
+      <!-- Font Awesome CDN -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+      // Initialize EmailJS
+      (function () {
+        emailjs.init("KjlarvHvcRLNvtTan");
+      })();
+
+      // Function to send an email
+      function sendMail() {
+        let params = {
+          name: document.getElementById("name").value,
+          email: document.getElementById("email").value,
+          phonenumber: document.getElementById("phonenumber").value,
+          subject: document.getElementById("sub").value,
+          message: document.getElementById("msg").value,
+        };
+
+        emailjs.send("service_gymuh7t", "template_mbhe9yh", params).then(
+          function (response) {
+            alert("Email sent successfully!");
+            console.log("SUCCESS!", response.status, response.text);
+            location.reload();
+          },
+          function (error) {
+            alert("Failed to send email. Please try again.");
+            console.error("FAILED...", error);
+          }
+        );
+      }
+    </script>
+  </head>
+  <body>
+    <header class="header">
+      <a href="#home" class="logo"> Praveen <span>Hanamantagoudra</span> </a>
+
+      <i class="bx bx-menu" id="menu-icon"></i>
+
+      <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="home" id="home">
+      <div class="home-circle-1"></div>
+      <div class="home-circle-2"></div>
+
+      <div class="home-content">
+        <h3>Hi</h3>
+        <h1>I'm <span>Praveen</span></h1>
+        <h3 class="text-animation">
+          I'm a <span class="typewriter-text"></span>
+        </h3>
+        <p>
+          "Experienced Frontend Developer skilled in HTML, CSS, JavaScript, React.js, php, Bootstrap, and MUI, with expertise in API
+          integration. Committed to delivering high-quality projects and ensuring client satisfaction. Continuously improving skills and
+          embracing emerging technologies to drive project success."
+        </p>
+
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/praveen-hanamantagoudra-a90b55249/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"  target="_blank"><i class="bx bxl-linkedin-square"></i></a>
+          <a href="https://github.com/Praveen8722" target="_blank"
+            ><i class="bx bxl-github"></i
+          ></a>
+          <a href="#" 
+            ><i class="bx bxl-instagram"></i
+          ></a>
+          <a href="#" 
+            ><i class="bx bxl-facebook"></i
+          ></a>
+        </div>
+
+        <a href="Praveen__cv1.pdf" target="_blank" download class="btn">Download CV</a>
+      </div>
+
+      <div class="home-img">
+        <img src="Praveen.png" alt="" />
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-circle"></div>
+
+      <div class="about-img">
+        <img src="Praveen.png" alt="" />
+      </div>
+
+      <div class="about-content">
+        <h2 class="heading">About <span>Me</span></h2>
+
+        <h3 class="typewriter-text">I'm a <span>Frontend developer</span></h3>
+
+        <p>
+          Praveen Hanamantagoudra is a <strong>Frontend Developer</strong> with
+          6 months of work experience
+          <strong> at IRP Innovative Solutions Pvt. Ltd.</strong>, where he
+          honed his skills in creating responsive, user-friendly websites and
+          integrating APIs. He specializes in HTML, CSS, JavaScript, React.js,
+          Next.js, Material-UI, Bootstrap, and PHP, with strong expertise in API
+          integration and version control using Git. Praveen has worked on
+          projects such as e-commerce platforms, ERP systems, and photography
+          websites, delivering high-quality solutions. He holds a Bachelor's
+          degree and is currently pursuing an <strong>MCA</strong> through a
+          distance education program. Passionate about building impactful
+          digital experiences, Praveen is committed to continuous learning and
+          staying updated with the latest web technologies.
+        </p>
+        <div class="skills-section">
+          <h1>Technical Skills</h1>
+          <div class="skills-container">
+            <div class="skills-left">
+              <div class="skill-category">
+                <h2>Frontend Development</h2>
+                <ul>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                  <li>React.js</li>
+                  <li>Material-UI</li>
+                  <li>Bootstrap</li>
+                </ul>
+              </div>
+              <div class="skill-category">
+                <h2>Scripting & Automation</h2>
+                <ul>
+                  <li>Google AppScript</li>
+                </ul>
+              </div>
+            </div>
+            <div class="skills-right">
+              <div class="skill-category">
+                <h2>Backend Development</h2>
+                <ul>
+                  <li>PHP</li>
+                  <li>API Integration</li>
+                  <li>Postman</li>
+                </ul>
+              </div>
+              <div class="skill-category">
+                <h2>Tools & Platforms</h2>
+                <ul>
+                  <li>Git</li>
+                  <li>GitHub</li>
+                  <li>VS Code</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <a href="#" class="btn">Read More</a> -->
+      </div>
+    </section>
+
+    <section class="timeline-section" id="education">
+      <h2 class="heading">Education</h2>
+      <div class="timeline-items">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2020</div>
+          <div class="timeline-content">
+            <h3>Post - graduation</h3>
+            <p>
+              <strong>University:</strong> Karnataka State Open University
+              (KSOU) <br />
+              <strong>Degree:</strong> MCA - Master of Computer Applications
+              (Distance Education Program) <br />
+              <strong>Location:</strong> Mysore, Karnataka
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2021</div>
+          <div class="timeline-content">
+            <h3>Under - graduation</h3>
+            <p>
+              <strong>University :</strong> Karnataka University of Dharwad
+              <br />
+              <strong>Collage :</strong> Karnataka University of Dharwad <br />
+              <strong>Degree :</strong> Bachelor of Commerce - CGPA: 61.81
+              <br />
+              <strong>Location :</strong> Haveri, Karnataka
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2025</div>
+          <div class="timeline-content">
+            <h3>Intership</h3>
+            <p>
+              <strong>Frontend Developer</strong> <br />
+              <strong> IRP Innovative Solutions Pvt Ltd, Bengaluru </strong>
+              <br />
+              As a Frontend Developer, I built and maintained scalable,
+              responsive web solutions using HTML, CSS, JavaScript, React.js,
+              Bootstrap, and Material-UI. I developed user-friendly interfaces,
+              integrated APIs for seamless functionality, and collaborated with
+              teams to deliver high-quality projects like a Laravel-based
+              <strong> Marketplace Ecommerce Website</strong> and a
+              comprehensive <strong>ERP Software Web Application</strong> . My
+              work focused on enhancing user experience and ensuring client
+              satisfaction while leveraging tools like Git and Postman for
+              efficient development.
+            </p>
+          </div>
+        </div>
+
+        <!-- <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2026</div>
+          <div class="timeline-content">
+            <h3>Job 1</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis
+              velit cupiditate harum dolorem, quod alias debitis possimus beatae
+              optio, incidunt voluptas repellendus magni expedita veniam.
+              Perferendis quaerat, quidem impedit nobis sunt molestiae excepturi
+              temporibus.
+            </p>
+          </div>
+        </div> -->
+
+        <!-- <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2027</div>
+          <div class="timeline-content">
+            <h3>Job 2</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis
+              velit cupiditate harum dolorem, quod alias debitis possimus beatae
+              optio, incidunt voluptas repellendus magni expedita veniam.
+              Perferendis quaerat, quidem impedit nobis sunt molestiae excepturi
+              temporibus.
+            </p>
+          </div>
+        </div> -->
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <h2 class="heading">Services</h2>
+
+      <div class="service-container">
+        <div class="services-box">
+          <i class="bx bx-code-block"></i>
+
+          <h3>Frontend and Web Development</h3>
+          <div style="padding: 1rem; max-width: 600px; margin: auto">
+            <ul style="list-style: none; padding: 0">
+              <li style="margin-bottom: 1rem">
+                <span
+                  style="display: block; font-size: 1rem; font-weight: bold"
+                >
+                  Responsive Web Development
+                </span>
+                <p style="font-size: 0.875rem; margin: 0">
+                  Craft pixel-perfect, mobile-friendly, and user-centric
+                  interfaces using modern technologies like HTML, CSS,
+                  JavaScript, React.js, Material-UI, and Bootstrap.
+                </p>
+              </li>
+              <li style="margin-bottom: 1rem">
+                <span
+                  style="display: block; font-size: 1rem; font-weight: bold"
+                >
+                  Frontend Optimization
+                </span>
+                <p style="font-size: 0.875rem; margin: 0">
+                  Enhance website performance by optimizing code, assets, and
+                  loading times using best practices and tools.
+                </p>
+              </li>
+              <li style="margin-bottom: 1rem">
+                <span
+                  style="display: block; font-size: 1rem; font-weight: bold"
+                >
+                  UI/UX Design Implementation
+                </span>
+                <p style="font-size: 0.875rem; margin: 0">
+                  Transform creative designs into functional, visually engaging
+                  user interfaces while prioritizing accessibility and
+                  performance.
+                </p>
+              </li>
+              <li style="margin-bottom: 1rem">
+                <span
+                  style="display: block; font-size: 1rem; font-weight: bold"
+                >
+                  Single Page Applications (SPAs)
+                </span>
+                <p style="font-size: 0.875rem; margin: 0">
+                  Build fast, interactive SPAs with frameworks like React.js and
+                  Next.js, ensuring seamless navigation and superior user
+                  experiences.
+                </p>
+              </li>
+              <li style="margin-bottom: 1rem">
+                <span
+                  style="display: block; font-size: 1rem; font-weight: bold"
+                >
+                  Cross-Browser Compatibility
+                </span>
+                <p style="font-size: 0.875rem; margin: 0">
+                  Ensure consistent functionality and appearance across all
+                  major browsers and devices.
+                </p>
+              </li>
+              <li>
+                <span
+                  style="display: block; font-size: 1rem; font-weight: bold"
+                >
+                  App Development (Mobile/Web)
+                </span>
+                <p style="font-size: 0.875rem; margin: 0">
+                  Develop mobile and web applications that deliver a smooth,
+                  native-like experience using React Native or other app
+                  development frameworks.
+                </p>
+              </li>
+            </ul>
+          </div>
+
+          <!-- <a href="#" class="btn">Read More</a> -->
+        </div>
+
+        <div class="services-box">
+          <i class="bx bxs-palette"></i>
+
+          <h3>Full Stack Development</h3>
+          <div style="padding: 1rem; max-width: 600px; margin: auto">
+            <ul style="list-style: none; padding: 0">
+              <li style="margin-bottom: 1rem">
+                <span
+                  style="display: block; font-size: 1rem; font-weight: bold"
+                >
+                  Full Stack Web Solutions
+                </span>
+                <p style="font-size: 0.875rem; margin: 0">
+                  Develop end-to-end solutions for web applications by
+                  integrating frontend frameworks like React.js with backend
+                  systems like Laravel, Node.js, or PHP.
+                </p>
+              </li>
+              <li style="margin-bottom: 1rem">
+                <span
+                  style="display: block; font-size: 1rem; font-weight: bold"
+                >
+                  API Integration
+                </span>
+                <p style="font-size: 0.875rem; margin: 0">
+                  Build and integrate secure, scalable RESTful APIs to connect
+                  frontend applications with databases and backend services.
+                </p>
+              </li>
+              <li style="margin-bottom: 1rem">
+                <span
+                  style="display: block; font-size: 1rem; font-weight: bold"
+                >
+                  Database Management
+                </span>
+                <p style="font-size: 0.875rem; margin: 0">
+                  Design, implement, and optimize database systems using MySQL,
+                  MongoDB, or similar technologies.
+                </p>
+              </li>
+              <li style="margin-bottom: 1rem">
+                <span
+                  style="display: block; font-size: 1rem; font-weight: bold"
+                >
+                  E-Commerce Development
+                </span>
+                <p style="font-size: 0.875rem; margin: 0">
+                  Create dynamic and secure e-commerce platforms, complete with
+                  payment integration, user authentication, and inventory
+                  management.
+                </p>
+              </li>
+              <li style="margin-bottom: 1rem">
+                <span
+                  style="display: block; font-size: 1rem; font-weight: bold"
+                >
+                  App Development (Mobile/Web)
+                </span>
+                <p style="font-size: 0.875rem; margin: 0">
+                  Build cross-platform mobile applications using frameworks like
+                  React Native or Flutter, or develop web apps with technologies
+                  like Next.js and Node.js.
+                </p>
+              </li>
+              <li>
+                <span
+                  style="display: block; font-size: 1rem; font-weight: bold"
+                >
+                  Server Deployment & Maintenance
+                </span>
+                <p style="font-size: 0.875rem; margin: 0">
+                  Deploy and maintain web applications on cloud platforms such
+                  as AWS or Firebase, ensuring high availability and
+                  scalability.
+                </p>
+              </li>
+            </ul>
+          </div>
+
+          <!-- <a href="#" class="btn">Read More</a> -->
+        </div>
+
+        <div class="services-box">
+          <i class="bx bxs-devices"></i>
+
+          <h3>Software Development</h3>
+          <div style="padding: 1rem; max-width: 600px; margin: auto">
+            <ul style="list-style: none; padding: 0">
+              <li style="margin-bottom: 1rem">
+                <span
+                  style="display: block; font-size: 1rem; font-weight: bold"
+                >
+                  Custom Software Solutions
+                </span>
+                <p style="font-size: 0.875rem; margin: 0">
+                  Design and develop tailored software applications to meet
+                  unique business requirements.
+                </p>
+              </li>
+              <li style="margin-bottom: 1rem">
+                <span
+                  style="display: block; font-size: 1rem; font-weight: bold"
+                >
+                  Desktop and Web Applications
+                </span>
+                <p style="font-size: 0.875rem; margin: 0">
+                  Create efficient, high-performing desktop and web applications
+                  using modern technologies.
+                </p>
+              </li>
+              <li style="margin-bottom: 1rem">
+                <span
+                  style="display: block; font-size: 1rem; font-weight: bold"
+                >
+                  API Development
+                </span>
+                <p style="font-size: 0.875rem; margin: 0">
+                  Build robust APIs for seamless data exchange between different
+                  platforms and systems.
+                </p>
+              </li>
+              <li style="margin-bottom: 1rem">
+                <span
+                  style="display: block; font-size: 1rem; font-weight: bold"
+                >
+                  Code Refactoring & Optimization
+                </span>
+                <p style="font-size: 0.875rem; margin: 0">
+                  Enhance the performance and maintainability of existing
+                  software with optimized and clean code.
+                </p>
+              </li>
+              <li style="margin-bottom: 1rem">
+                <span
+                  style="display: block; font-size: 1rem; font-weight: bold"
+                >
+                  System Integration
+                </span>
+                <p style="font-size: 0.875rem; margin: 0">
+                  Develop solutions to integrate various tools and software
+                  systems, ensuring interoperability and efficiency.
+                </p>
+              </li>
+              <li style="margin-bottom: 1rem">
+                <span
+                  style="display: block; font-size: 1rem; font-weight: bold"
+                >
+                  App Development (Mobile/Web)
+                </span>
+                <p style="font-size: 0.875rem; margin: 0">
+                  Develop mobile apps for iOS and Android, or web-based
+                  applications, with a focus on performance, usability, and
+                  seamless user experience.
+                </p>
+              </li>
+              <li>
+                <span
+                  style="display: block; font-size: 1rem; font-weight: bold"
+                >
+                  Testing & Debugging
+                </span>
+                <p style="font-size: 0.875rem; margin: 0">
+                  Provide thorough testing and debugging services to ensure
+                  software reliability and user satisfaction.
+                </p>
+              </li>
+            </ul>
+          </div>
+
+          <!-- <a href="#" class="btn">Read More</a> -->
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2 class="heading">Contact <span>Me</span></h2>
+      <div class="contact-container">
+        <!-- Left Side: Contact Details -->
+        <div class="contact-details">
+          <h3>Contact Information</h3>
+          <p><i class="fas fa-envelope-square"></i> <a href="mailto:praveengoud8722@gmail.com">praveengoud8722@gmail.com</a></p>
+          <p><i class="fas fa-phone-alt"></i> <a href="tel:+919164121730">+91 9164121730</a></p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/praveen-hanamantagoudra-a90b55249/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"  target="_blank" style="margin-right: 20px; color: #000; transition: all 0.3s ease; display: inline-block; padding: 10px; border-radius: 50%;"
+               onmouseover="this.style.backgroundColor='#0073b1'; this.style.color='white';"
+               onmouseout="this.style.backgroundColor=''; this.style.color='#000';">
+              <i class="bx bxl-linkedin-square"></i>
+            </a>
+            <a href="https://github.com/Praveen8722" target="_blank" style="margin-right: 20px; color: #000; transition: all 0.3s ease; display: inline-block; padding: 10px; border-radius: 50%;"
+               onmouseover="this.style.backgroundColor='#333'; this.style.color='white';"
+               onmouseout="this.style.backgroundColor=''; this.style.color='#000';">
+              <i class="bx bxl-github"></i>
+            </a>
+            <a href="#" style="margin-right: 20px; color: #000; transition: all 0.3s ease; display: inline-block; padding: 10px; border-radius: 50%;"
+               onmouseover="this.style.backgroundColor='#e1306c'; this.style.color='white';"
+               onmouseout="this.style.backgroundColor=''; this.style.color='#000';">
+              <i class="bx bxl-instagram"></i>
+            </a>
+            <a href="#"  style="margin-right: 20px; color: #000; transition: all 0.3s ease; display: inline-block; padding: 10px; border-radius: 50%;"
+               onmouseover="this.style.backgroundColor='#3b5998'; this.style.color='white';"
+               onmouseout="this.style.backgroundColor=''; this.style.color='#000';">
+              <i class="bx bxl-facebook"></i>
+            </a>
+        </div>
+          <a href="Praveen__cv1.pdf" target="_blank" download class="btn">Download CV</a>
+        </div>
+        
+        
+        
+        <!-- Right Side: Contact Form -->
+        <form action="#">
+          <div class="input-box">
+            <input type="text" id="name" placeholder="Full Name" />
+            <input type="email" id="email" placeholder="Email" />
+          </div>
+          <div class="input-box">
+            <input type="number" id="phonenumber" placeholder="Phone Number" />
+            <input type="text" id="sub" placeholder="Subject" />
+          </div>
+          <textarea
+            id="msg"
+            cols="30"
+            rows="10"
+            placeholder="Your Message"
+          ></textarea>
+          <input
+            type="button"
+            onclick="sendMail()"
+            value="Send Message"
+            class="btn"
+          />
+        </form>
+      </div>
+    </section>
+    
+
+    <footer class="footer">
+      <div class="social">
+        <a href="https://www.linkedin.com/in/praveen-hanamantagoudra-a90b55249/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"  target="_blank"><i class="bx bxl-linkedin-square"></i></a>
+        <a href="https://github.com/Praveen8722" target="_blank"
+          ><i class="bx bxl-github"></i
+        ></a>
+        <a href="#" 
+          ><i class="bx bxl-instagram"></i
+        ></a>
+        <a href="#" 
+          ><i class="bx bxl-facebook"></i
+        ></a>
+      </div>
+
+      <ul class="list">
+        <li>
+          <a href="">FQA</a>
+        </li>
+        <li>
+          <a href="">About Me</a>
+        </li>
+        <li>
+          <a href="">Services</a>
+        </li>
+        <li>
+          <a href="">Privacy policy</a>
+        </li>
+      </ul>
+
+      <p class="copyright">
+        © Copyright Made by Praveen Hanamantagoudra 
+        <i class="fas fa-heart green-heart"></i>
+      </p>
+      
+    </footer>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"
+      integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
